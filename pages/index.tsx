@@ -2,6 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
 import "semantic-ui-css/semantic.min.css";
 import { Loader } from "semantic-ui-react";
+import LikeButton from "./components/LikeButton";
 interface SearchCatimage {
   id: string;
   url: string;
@@ -53,6 +54,8 @@ const Home: NextPage<IndexPageProps> = ({ initialCatimageurl }) => {
       <button style={{ marginTop: 18 }} onClick={handleClick}>
         DayCat
       </button>
+      <h2>👍をクリック</h2>
+      <LikeButton />
     </div>
   );
 };
